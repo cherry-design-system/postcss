@@ -16,7 +16,8 @@
 	],
 	"scripts": {
 		"dev": "gulp dev",
-		"build": "gulp build"
+		"build": "gulp build",
+		"lint": "stylelint \"./src/**/*.css\""
 	},
 	"dependencies": {
 		"autoprefixer": "^10.1.0",
@@ -29,6 +30,7 @@
 		"postcss": "^8.2.2",
 		"postcss-import": "^14.0.0",
 		"postcss-mixins": "^7.0.2",
-		"postcss-preset-env": "^6.7.0"
+		"postcss-preset-env": "^6.7.0",
+		"stylelint": "^13.8.0"
 	}
 }
