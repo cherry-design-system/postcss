@@ -2,6 +2,10 @@
 	"name": "cherry-postcss",
 	"version": "0.0.1",
 	"description": "Cherry for PostCSS",
+	"author": "Luan Gjokaj <luan@riangle.com>",
+	"homepage": "https://cherry.design",
+	"repository": "https://github.com/cherry-design-system/postcss",
+	"license": "MIT",
 	"keywords": [
 		"cherry",
 		"postcss",
@@ -10,14 +14,10 @@
 		"design",
 		"design system"
 	],
-	"homepage": "https://cherry.design",
-	"repository": "https://github.com/cherry-design-system/postcss",
 	"scripts": {
 		"dev": "gulp dev",
 		"build": "gulp build"
 	},
-	"author": "Luan Gjokaj (https://www.riangle.com)",
-	"license": "MIT",
 	"dependencies": {
 		"autoprefixer": "^10.1.0",
 		"cssnano": "^4.1.10",
