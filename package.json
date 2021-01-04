@@ -11,14 +11,13 @@
 		"design system"
 	],
 	"homepage": "https://cherry.design",
-	"repository": "https://github.com/cherry-deisgn/postcss",
+	"repository": "https://github.com/cherry-design-system/postcss",
 	"scripts": {
 		"dev": "gulp dev",
 		"build": "gulp build"
 	},
 	"author": "Luan Gjokaj (https://www.riangle.com)",
 	"license": "MIT",
-	"browserslist": "> .5% or last 2 versions",
 	"dependencies": {
 		"autoprefixer": "^10.1.0",
 		"cssnano": "^4.1.10",
