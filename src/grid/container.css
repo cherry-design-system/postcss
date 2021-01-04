@@ -1,0 +1,26 @@
+.container {
+	margin: auto;
+	width: 100%;
+	padding: 0 var(--margin-container-mobile);
+	max-width: var(--max-width);
+
+	@media (--screen-lg) {
+		padding: 0 var(--margin-container-desktop);
+	}
+
+	&.fluid {
+		max-width: var(--max-width-limit);
+	}
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-left {
+	text-align: left;
+}

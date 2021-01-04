@@ -1,0 +1,115 @@
+.hero1,
+.hero2,
+.hero3,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-head);
+	font-weight: 800;
+	margin: 0;
+}
+
+.hero1 {
+	font-size: var(--size-hero1-mobile);
+	line-height: var(--lineheight-hero1-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-hero1-desktop);
+		line-height: var(--lineheight-hero1-desktop);
+	}
+}
+
+.hero2 {
+	font-size: var(--size-hero2-mobile);
+	line-height: var(--lineheight-hero2-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-hero2-desktop);
+		line-height: var(--lineheight-hero2-desktop);
+	}
+}
+
+.hero3 {
+	font-size: var(--size-hero3-mobile);
+	line-height: var(--lineheight-hero3-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-hero3-desktop);
+		line-height: var(--lineheight-hero3-desktop);
+	}
+}
+
+h1,
+.h1 {
+	font-size: var(--size-h1-mobile);
+	line-height: var(--lineheight-h1-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-h1-desktop);
+		line-height: var(--lineheight-h1-desktop);
+	}
+}
+
+h2,
+.h2 {
+	font-size: var(--size-h2-mobile);
+	line-height: var(--lineheight-h2-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-h2-desktop);
+		line-height: var(--lineheight-h2-desktop);
+	}
+}
+
+h3,
+.h3 {
+	font-size: var(--size-h3-mobile);
+	line-height: var(--lineheight-h3-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-h3-desktop);
+		line-height: var(--lineheight-h3-desktop);
+	}
+}
+
+h4,
+.h4 {
+	font-size: var(--size-h4-mobile);
+	line-height: var(--lineheight-h4-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-h4-desktop);
+		line-height: var(--lineheight-h4-desktop);
+	}
+}
+
+h5,
+.h5 {
+	font-size: var(--size-h5-mobile);
+	line-height: var(--lineheight-h5-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-h5-desktop);
+		line-height: var(--lineheight-h5-desktop);
+	}
+}
+
+h6,
+.h6 {
+	font-size: var(--size-h6-mobile);
+	line-height: var(--lineheight-h6-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-h6-desktop);
+		line-height: var(--lineheight-h6-desktop);
+	}
+}

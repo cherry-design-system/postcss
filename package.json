@@ -1,0 +1,35 @@
+{
+	"name": "cherry-postcss",
+	"version": "0.0.1",
+	"description": "Cherry for PostCSS",
+	"keywords": [
+		"cherry",
+		"postcss",
+		"css",
+		"framework",
+		"design",
+		"design system"
+	],
+	"homepage": "https://cherry.design",
+	"repository": "https://github.com/cherry-deisgn/postcss",
+	"scripts": {
+		"dev": "gulp dev",
+		"build": "gulp build"
+	},
+	"author": "Luan Gjokaj (https://www.riangle.com)",
+	"license": "MIT",
+	"browserslist": "> .5% or last 2 versions",
+	"dependencies": {
+		"autoprefixer": "^10.1.0",
+		"cssnano": "^4.1.10",
+		"gulp": "^4.0.2",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^9.0.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-util": "^3.0.8",
+		"postcss": "^8.2.2",
+		"postcss-import": "^14.0.0",
+		"postcss-mixins": "^7.0.2",
+		"postcss-preset-env": "^6.7.0"
+	}
+}
