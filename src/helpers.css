@@ -19,6 +19,26 @@
 	}
 }
 
+@define-mixin font-eyebrow {
+	font-size: var(--size-eyebrow-mobile);
+	line-height: var(--lineheight-eyebrow-mobile);
+
+	@media (min-width: var(--screen-lg) ){
+		font-size: var(--size-eyebrow-desktop);
+		line-height: var(--lineheight-eyebrow-desktop);
+	}
+}
+
+@define-mixin font-subtitle {
+	font-size: var(--size-subtitle-mobile);
+	line-height: var(--lineheight-subtitle-mobile);
+
+	@media (min-width: var(--screen-lg) ){
+		font-size: var(--size-subtitle-desktop);
+		line-height: var(--lineheight-subtitle-desktop);
+	}
+}
+
 @define-mixin font-button {
 	font-size: var(--size-button-mobile);
 	line-height: var(--lineheight-button-mobile);

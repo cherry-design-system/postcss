@@ -113,3 +113,31 @@ h6,
 		line-height: var(--lineheight-h6-desktop);
 	}
 }
+
+.font-style-eyebrow {
+	@mixin font-eyebrow;
+}
+
+.font-style-subtitle {
+	@mixin font-subtitle;
+}
+
+.font-style-button {
+	@mixin font-button;
+}
+
+.font-style-button-big {
+	@mixin font-button-big;
+}
+
+.font-style-lead {
+	@mixin font-lead;
+}
+
+.font-style-input {
+	@mixin font-input;
+}
+
+.font-style-input-big {
+	@mixin font-input-big;
+}
