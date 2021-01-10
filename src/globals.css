@@ -141,6 +141,13 @@ p {
 	}
 }
 
+blockquote,
+p,
+ol,
+ul {
+	color: $color-gray;
+}
+
 figure {
 	margin: 0;
 }
