@@ -1,4 +1,4 @@
-@define-mixin sizes {
+.space {
 	display: block;
 	width: 0;
 
@@ -118,10 +118,6 @@
 			width: 0;
 		}
 	}
-}
-
-.space {
-	@mixin sizes;
 }
 
 @media (--screen-xs) {
