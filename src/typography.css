@@ -115,29 +115,64 @@ h6,
 }
 
 .font-style-eyebrow {
-	@mixin font-eyebrow;
+	@mixin font-eyebrow-mobile;
+	font-weight: 600;
+	
+	@media (--screen-lg) {
+		@mixin font-eyebrow-desktop;
+	}
 }
 
 .font-style-subtitle {
-	@mixin font-subtitle;
+	@mixin font-subtitle-mobile;
+	font-weight: 600;
+
+	@media (--screen-lg) {
+		@mixin font-subtitle-desktop;
+	}
 }
 
 .font-style-button {
-	@mixin font-button;
+	@mixin font-button-mobile;
+	font-weight: 600;
+
+	@media (--screen-lg) {
+		@mixin font-button-desktop;
+	}
 }
 
 .font-style-button-big {
-	@mixin font-button-big;
+	@mixin font-button-big-mobile;
+	font-weight: 600;
+
+	@media (--screen-lg) {
+		@mixin font-button-big-mobile;
+	}
 }
 
 .font-style-lead {
-	@mixin font-lead;
+	@mixin font-lead-mobile;
+	font-weight: 400;
+
+	@media (--screen-lg) {
+		@mixin font-lead-desktop;
+	}
 }
 
 .font-style-input {
-	@mixin font-input;
+	@mixin font-input-mobile;
+	font-weight: 400;
+
+	@media (--screen-lg) {
+		@mixin font-input-desktop;
+	}
 }
 
 .font-style-input-big {
-	@mixin font-input-big;
+	@mixin font-input-big-mobile;
+	font-weight: 400;
+
+	@media (--screen-lg) {
+		@mixin font-input-big-desktop;
+	}
 }

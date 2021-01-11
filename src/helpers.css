@@ -19,79 +19,72 @@
 	}
 }
 
-@define-mixin font-eyebrow {
+@define-mixin font-eyebrow-mobile {
 	font-size: var(--size-eyebrow-mobile);
 	line-height: var(--lineheight-eyebrow-mobile);
-	font-weight: 600;
-
-	@media (min-width: var(--screen-lg) ){
-		font-size: var(--size-eyebrow-desktop);
-		line-height: var(--lineheight-eyebrow-desktop);
-	}
 }
 
-@define-mixin font-subtitle {
+@define-mixin font-eyebrow-desktop {
+	font-size: var(--size-eyebrow-desktop);
+	line-height: var(--lineheight-eyebrow-desktop);
+}
+
+@define-mixin font-subtitle-mobile {
 	font-size: var(--size-subtitle-mobile);
 	line-height: var(--lineheight-subtitle-mobile);
-	font-weight: 600;
-
-	@media (min-width: var(--screen-lg) ){
-		font-size: var(--size-subtitle-desktop);
-		line-height: var(--lineheight-subtitle-desktop);
-	}
 }
 
-@define-mixin font-button {
+@define-mixin font-subtitle-desktop {
+	font-size: var(--size-subtitle-desktop);
+	line-height: var(--lineheight-subtitle-desktop);
+}
+
+@define-mixin font-button-mobile {
 	font-size: var(--size-button-mobile);
 	line-height: var(--lineheight-button-mobile);
-	font-weight: 600;
-
-	@media (--screen-lg) {
-		font-size: var(--size-button-desktop);
-		line-height: var(--lineheight-button-desktop);
-	}
 }
 
-@define-mixin font-button-big {
+@define-mixin font-button-desktop {
+	font-size: var(--size-button-desktop);
+	line-height: var(--lineheight-button-desktop);
+}
+
+@define-mixin font-button-big-mobile {
 	font-size: var(--size-button-big-mobile);
 	line-height: var(--lineheight-button-big-mobile);
-	font-weight: 600;
-
-	@media (--screen-lg) {
-		font-size: var(--size-button-big-desktop);
-		line-height: var(--lineheight-button-big-desktop);
-	}
 }
 
-@define-mixin font-lead {
+@define-mixin font-button-big-desktop {
+	font-size: var(--size-button-big-desktop);
+	line-height: var(--lineheight-button-big-desktop);
+}
+
+@define-mixin font-lead-mobile {
 	font-size: var(--size-lead-mobile);
 	line-height: var(--lineheight-lead-mobile);
-	font-weight: 400;
-
-	@media (--screen-lg) {
-		font-size: var(--size-lead-desktop);
-		line-height: var(--lineheight-lead-desktop);
-	}
 }
 
-@define-mixin font-input {
+@define-mixin font-lead-desktop {
+	font-size: var(--size-lead-desktop);
+	line-height: var(--lineheight-lead-desktop);
+}
+
+@define-mixin font-input-mobile {
 	font-size: var(--size-input-mobile);
 	line-height: var(--lineheight-input-mobile);
-	font-weight: 400;
-
-	@media (--screen-lg) {
-		font-size: var(--size-input-desktop);
-		line-height: var(--lineheight-input-desktop);
-	}
 }
 
-@define-mixin font-input-big {
+@define-mixin font-input-desktop {
+	font-size: var(--size-input-desktop);
+	line-height: var(--lineheight-input-desktop);
+}
+
+@define-mixin font-input-big-mobile {
 	font-size: var(--size-input-big-mobile);
 	line-height: var(--lineheight-input-big-mobile);
-	font-weight: 400;
+}
 
-	@media (--screen-lg) {
-		font-size: var(--size-input-big-desktop);
-		line-height: var(--lineheight-input-big-desktop);
-	}
+@define-mixin font-input-big-desktop {
+	font-size: var(--size-input-big-desktop);
+	line-height: var(--lineheight-input-big-desktop);
 }

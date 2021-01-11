@@ -2,12 +2,20 @@ button,
 input[type="submit"],
 .button {
 	@mixin reset-button;
-	@mixin font-button;
+	@mixin font-button-mobile;
 	display: inline-block;
 	vertical-align: middle;
 
 	&.big {
-		@mixin font-button-big;
+		@mixin font-button-big-mobile;
+	}
+
+	@media (--screen-lg) {
+		@mixin font-button-desktop;
+
+		&.big {
+			@mixin font-button-big-desktop;
+		}
 	}
 
 	padding: 15px 25px;

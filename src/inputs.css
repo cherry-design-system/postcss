@@ -11,7 +11,7 @@ select {
 	border: solid 2px var(--color-gray-light);
 	padding: 15px 15px;
 	background: var(--color-light);
-	@mixin font-input;
+	@mixin font-input-mobile;
 
 	@media (hover: hover) {
 		&:hover:not([disabled]) {
@@ -38,7 +38,17 @@ select {
 	}
 
 	&.big {
-		@mixin font-input-big;
+		@mixin font-input-big-mobile;
+	}
+
+	@media (--screen-lg) {
+		@mixin font-input-desktop;
+
+		&.big {
+			&.big {
+				@mixin font-input-big-desktop;
+			}
+		}
 	}
 }
 
