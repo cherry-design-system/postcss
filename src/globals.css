@@ -145,7 +145,7 @@ blockquote,
 p,
 ol,
 ul {
-	color:  var(--color-gray);
+	color: var(--color-gray);
 }
 
 figure {
