@@ -5,6 +5,8 @@ input[type="submit"],
 	@mixin font-button-mobile;
 	display: inline-block;
 	vertical-align: middle;
+	white-space: nowrap;
+	hyphens: auto;
 
 	&.big {
 		@mixin font-button-big-mobile;
