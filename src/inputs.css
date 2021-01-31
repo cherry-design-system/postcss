@@ -79,6 +79,7 @@ input[type="radio"] {
 	height: 22px;
 	display: inline-block;
 	position: relative;
+	margin-right: 7px;
 
 	&.big {
 		width: 32px;
@@ -169,10 +170,6 @@ label {
 	vertical-align: middle;
 	padding: 0;
 	margin: 0;
-
-	&[for] {
-		padding: 0 0 0 7px;
-	}
 
 	&.error {
 		color: var(--color-error);
