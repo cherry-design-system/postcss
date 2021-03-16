@@ -1,6 +1,6 @@
 {
 	"name": "cherry-postcss",
-	"version": "0.0.1-13",
+	"version": "0.0.1-14",
 	"description": "Cherry for PostCSS",
 	"author": "Luan Gjokaj <luan@riangle.com>",
 	"homepage": "https://cherry.design",
@@ -20,17 +20,17 @@
 		"lint": "stylelint \"./src/**/*.css\""
 	},
 	"dependencies": {
-		"autoprefixer": "^10.2.4",
+		"autoprefixer": "^10.2.5",
 		"cssnano": "^4.1.10",
 		"gulp": "^4.0.2",
 		"gulp-plumber": "^1.2.1",
 		"gulp-postcss": "^9.0.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-util": "^3.0.8",
-		"postcss": "^8.2.4",
+		"postcss": "^8.2.8",
 		"postcss-import": "^14.0.0",
-		"postcss-mixins": "^7.0.2",
+		"postcss-mixins": "^7.0.3",
 		"postcss-preset-env": "^6.7.0",
-		"stylelint": "^13.9.0"
+		"stylelint": "^13.12.0"
 	}
 }
