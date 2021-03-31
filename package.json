@@ -1,6 +1,6 @@
 {
 	"name": "cherry-postcss",
-	"version": "0.0.1-14",
+	"version": "0.0.1-15",
 	"description": "Cherry for PostCSS",
 	"author": "Luan Gjokaj <luan@riangle.com>",
 	"homepage": "https://cherry.design",
@@ -27,7 +27,7 @@
 		"gulp-postcss": "^9.0.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-util": "^3.0.8",
-		"postcss": "^8.2.8",
+		"postcss": "^8.2.9",
 		"postcss-import": "^14.0.0",
 		"postcss-mixins": "^7.0.3",
 		"postcss-preset-env": "^6.7.0",
