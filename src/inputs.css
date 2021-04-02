@@ -165,12 +165,39 @@ select {
 	}
 }
 
+.radio-check-wrapper {
+	position: relative;
+	display: inline-block;
+	line-height: 1;
+
+	& input {
+		vertical-align: top;
+	}
+
+	&.big {
+		& label {
+			max-width: calc(100% - 50px);
+			margin-top: 3px;
+		}
+	}
+
+	& label {
+		max-width: calc(100% - 40px);
+		margin-top: -2px;
+	}
+}
+
 label {
 	color: var(--color-gray);
 	display: inline-block;
 	vertical-align: middle;
 	padding: 0;
 	margin: 0;
+	line-height: var(--lineheight-text-mobile);
+
+	@media (--screen-lg) {
+		line-height: $lineheight-text-desktop;
+	}
 
 	&.error {
 		color: var(--color-error);
