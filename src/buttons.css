@@ -12,6 +12,10 @@ input[type="submit"],
 		@mixin font-button-big-mobile;
 	}
 
+	&.full-width {
+		width: 100%;
+	}
+
 	@media (--screen-lg) {
 		@mixin font-button-desktop;
 
@@ -171,8 +175,4 @@ input[type="submit"],
 			cursor: not-allowed;
 		}
 	}
-}
-
-.full-width {
-	width: 100%;
 }

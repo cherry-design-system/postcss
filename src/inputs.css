@@ -41,13 +41,15 @@ select {
 		@mixin font-input-big-mobile;
 	}
 
+	&.full-width {
+		width: 100%;
+	}
+
 	@media (--screen-lg) {
 		@mixin font-input-desktop;
 
 		&.big {
-			&.big {
-				@mixin font-input-big-desktop;
-			}
+			@mixin font-input-big-desktop;
 		}
 	}
 }
@@ -59,8 +61,7 @@ input[type="email"],
 input[type="password"],
 textarea,
 select {
-	display: block;
-	width: 100%;
+	display: inline-block;
 	box-shadow: 0 0 0 0 var(--color-secondary-light);
 
 	&.error {
@@ -79,7 +80,7 @@ input[type="radio"] {
 	height: 22px;
 	display: inline-block;
 	position: relative;
-	margin-right: 7px;
+	margin-right: 3px;
 
 	&.big {
 		width: 32px;
@@ -167,7 +168,8 @@ select {
 
 .radio-check-wrapper {
 	position: relative;
-	display: inline-block;
+	display: block;
+	width: 100%;
 	line-height: 1;
 
 	& input {
@@ -177,13 +179,13 @@ select {
 	&.big {
 		& label {
 			max-width: calc(100% - 50px);
-			margin-top: 3px;
+			margin-top: 4px;
 		}
 	}
 
 	& label {
 		max-width: calc(100% - 40px);
-		margin-top: -2px;
+		margin-top: -1px;
 	}
 }
 
@@ -191,7 +193,7 @@ label {
 	color: var(--color-gray);
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0;
+	padding: 0 7px 0 0;
 	margin: 0;
 	line-height: var(--lineheight-text-mobile);
 
