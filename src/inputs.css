@@ -192,6 +192,7 @@ label {
 	position: relative;
 	display: inline-flex;
 	line-height: 1;
+	vertical-align: middle;
 
 	&.full-width {
 		display: flex;
@@ -204,13 +205,15 @@ label {
 
 	&.big {
 		& label {
-			max-width: calc(100% - 50px);
+			max-width: calc(100% - 40px);
+			min-width: calc(100% - 32px);
 			margin-top: 4px;
 		}
 	}
 
 	& label {
-		max-width: calc(100% - 40px);
+		max-width: calc(100% - 30px);
+		min-width: calc(100% - 22px);
 		margin-top: -1px;
 		padding: 0 0 0 10px;
 	}
@@ -222,14 +225,16 @@ label {
 		vertical-align: top;
 	}
 
-	& label {
-		max-width: calc(100% - 60px);
-	}
-
 	&.big {
 		& label {
 			max-width: calc(100% - 70px);
+			min-width: calc(100% - 56px);
 		}
+	}
+
+	& label {
+		max-width: calc(100% - 60px);
+		min-width: calc(100% - 46px);
 	}
 }
 
