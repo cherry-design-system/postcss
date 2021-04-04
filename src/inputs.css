@@ -81,7 +81,6 @@ input[type="radio"] {
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
-	font-size: 0;
 
 	&.big {
 		width: 32px;
@@ -167,15 +166,40 @@ select {
 	}
 }
 
-.radio-check-wrapper {
+label {
+	color: var(--color-gray);
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 10px 0 0;
+	margin: 0;
+	line-height: var(--lineheight-text-mobile);
+
+	@media (--screen-lg) {
+		line-height: var(--lineheight-text-desktop);
+	}
+
+	&.error {
+		color: var(--color-error);
+	}
+
+	&.success {
+		color: var(--color-success);
+	}
+}
+
+.radio-check-wrapper,
+.toggle-input-wrapper {
 	position: relative;
-	display: flex;
+	display: inline-flex;
 	width: 100%;
 	line-height: 1;
 
+	&.full-width {
+		display: flex;
+	}
+
 	& input {
 		vertical-align: top;
-		cursor: pointer;
 	}
 
 	&.big {
@@ -192,23 +216,144 @@ select {
 	}
 }
 
-label {
-	color: var(--color-gray);
+.toggle-input-wrapper {
+	& .toggle-input-inner {
+		margin-top: 0;
+		vertical-align: top;
+	}
+
+	& label {
+		max-width: calc(100% - 60px);
+	}
+
+	&.big {
+		& label {
+			max-width: calc(100% - 70px);
+		}
+	}
+}
+
+.toggle-input-inner {
 	display: inline-block;
-	vertical-align: middle;
-	padding: 0 10px 0 0;
 	margin: auto 0;
-	line-height: var(--lineheight-text-mobile);
+	position: relative;
+	vertical-align: middle;
 
-	@media (--screen-lg) {
-		line-height: $lineheight-text-desktop;
+	& * {
+		vertical-align: middle;
 	}
 
-	&.error {
-		color: var(--color-error);
+	& input {
+		@mixin reset-button;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		outline: none;
 	}
 
-	&.success {
-		color: var(--color-success);
+	& input:checked ~ .toggle-input-slider {
+		&:before {
+			max-width: 46px;
+			background: var(--color-secondary-light);
+		}
+
+		&:after {
+			transform: translate3d(0, 0, 0) translateX(23px);
+		}
+	}
+
+	@media (hover: hover) {
+		& input:hover:not([disabled]) ~ .toggle-input-slider {
+			border-color: var(--color-secondary);
+		}
+	}
+
+	& input:focus:not([disabled]) {
+		border: none;
+		box-shadow: none;
+
+		& ~ .toggle-input-slider {
+			border-color: var(--color-secondary);
+			box-shadow: 0 0 0 4px var(--color-secondary-light);
+			outline: none;
+		}
+	}
+
+	& input:active {
+		box-shadow: none;
+
+		& ~ .toggle-input-slider {
+			box-shadow: 0 0 0 2px var(--color-secondary-light);
+		}
+	}
+
+	& input:disabled {
+		cursor: not-allowed;
+	}
+
+	& input:disabled ~ .toggle-input-slider {
+		border-color: var(--color-gray);
+
+		&:before {
+			background: var(--color-gray-light);
+		}
+
+		&:after {
+			background: var(--color-gray);
+		}
+	}
+
+	& .toggle-input-slider {
+		border: solid 2px var(--color-gray-light);
+		border-radius: 30px;
+		background: var(--color-light);
+		pointer-events: none;
+		box-shadow: 0 0 0 0 var(--color-secondary-light);
+		transition: all 0.3s ease;
+		height: 22px;
+		width: 46px;
+
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+		}
+
+		&:before {
+			top: 5px;
+			left: 5px;
+			width: calc(100% - 10px);
+			height: calc(100% - 10px);
+			max-width: 0;
+			border-radius: 30px;
+			transition: all 0.3s ease;
+			background: var(--color-light);
+		}
+
+		&:after {
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+			background: var(--color-secondary);
+			transition: all 0.3s ease;
+			transform: translate3d(0, 0, 0) translateX(0);
+			width: 22px;
+			height: 22px;
+		}
+	}
+
+	&.big {
+		& .toggle-input-slider {
+			height: 32px;
+			width: 56px;
+
+			&:after {
+				width: 32px;
+				height: 32px;
+			}
+		}
 	}
 }
