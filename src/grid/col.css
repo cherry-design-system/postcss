@@ -580,3 +580,21 @@
 		order: 13;
 	}
 }
+
+.full-screen {
+	@media (--screen-lg) {
+		height: calc(100vh - var(--padding-top-body-desktop));
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+.sticky {
+	@media (--screen-lg) {
+		position: sticky;
+		top: var(--padding-top-body-deskto)p;
+		max-height: calc(100vh - var(--padding-top-body-desktop));
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+}
