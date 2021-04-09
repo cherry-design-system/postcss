@@ -1,265 +1,237 @@
+@define-mixin gutter-default {
+	margin-right: var(--margin-row-default);
+	margin-left: var(--margin-row-default);
+}
+
+@define-mixin gutter-col-default {
+	padding-right: var(--gutter-col-default);
+	padding-left: var(--gutter-col-default);
+}
+
+@define-mixin gutter-medium {
+	margin-right: var(--margin-row-medium);
+	margin-left: var(--margin-row-medium);
+}
+
+@define-mixin gutter-col-medium {
+	padding-right: var(--gutter-col-medium);
+	padding-left: var(--gutter-col-medium);
+}
+
+@define-mixin gutter-big {
+	margin-right: var(--margin-row-big);
+	margin-left: var(--margin-row-big);
+}
+
+@define-mixin gutter-col-big {
+	padding-right: var(--gutter-col-big);
+	padding-left: var(--gutter-col-big);
+}
+
 .row {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-right: var(--margin-row-default);
-	margin-left: var(--margin-row-default);
+	@mixin gutter-default;
 
 	& > * {
-		padding-right: var(--gutter-col-default);
-		padding-left: var(--gutter-col-default);
-	}
-
-	&.gutter-default {
-		margin-right: var(--margin-row-default);
-		margin-left: var(--margin-row-default);
-
-		& > * {
-			padding-right: var(--gutter-col-default);
-			padding-left: var(--gutter-col-default);
-		}
+		@mixin gutter-col-default;
 	}
 
 	&.gutter-medium {
-		margin-right: var(--margin-row-medium);
-		margin-left: var(--margin-row-medium);
+		@mixin gutter-medium;
 
 		& > * {
-			padding-right: var(--gutter-col-medium);
-			padding-left: var(--gutter-col-medium);
+			@mixin gutter-col-medium;
 		}
 	}
 
 	&.gutter-big {
-		margin-right: var(--margin-row-big);
-		margin-left: var(--margin-row-big);
+		@mixin gutter-big;
 
 		& > * {
-			padding-right: var(--gutter-col-big);
-			padding-left: var(--gutter-col-big);
+			@mixin gutter-col-big;
 		}
 	}
 
 	@media (--screen-xs) {
 		&.gutter-xs-default {
-			margin-right: var(--margin-row-default);
-			margin-left: var(--margin-row-default);
+			@mixin gutter-default;
 
 			& > * {
-				padding-right: var(--gutter-col-default);
-				padding-left: var(--gutter-col-default);
+				@mixin gutter-col-default;
 			}
 		}
 
 		&.gutter-xs-medium {
-			margin-right: var(--margin-row-medium);
-			margin-left: var(--margin-row-medium);
+			@mixin gutter-medium;
 
 			& > * {
-				padding-right: var(--gutter-col-medium);
-				padding-left: var(--gutter-col-medium);
+				@mixin gutter-col-medium;
 			}
 		}
 
 		&.gutter-xs-big {
-			margin-right: var(--margin-row-big);
-			margin-left: var(--margin-row-big);
+			@mixin gutter-big;
 
 			& > * {
-				padding-right: var(--gutter-col-big);
-				padding-left: var(--gutter-col-big);
+				@mixin gutter-col-big;
 			}
 		}
 	}
 
 	@media (--screen-sm) {
 		&.gutter-sm-default {
-			margin-right: var(--margin-row-default);
-			margin-left: var(--margin-row-default);
+			@mixin gutter-default;
 
 			& > * {
-				padding-right: var(--gutter-col-default);
-				padding-left: var(--gutter-col-default);
+				@mixin gutter-col-default;
 			}
 		}
 
 		&.gutter-sm-medium {
-			margin-right: var(--margin-row-medium);
-			margin-left: var(--margin-row-medium);
+			@mixin gutter-medium;
 
 			& > * {
-				padding-right: var(--gutter-col-medium);
-				padding-left: var(--gutter-col-medium);
+				@mixin gutter-col-medium;
 			}
 		}
 
 		&.gutter-sm-big {
-			margin-right: var(--margin-row-big);
-			margin-left: var(--margin-row-big);
+			@mixin gutter-big;
 
 			& > * {
-				padding-right: var(--gutter-col-big);
-				padding-left: var(--gutter-col-big);
+				@mixin gutter-col-big;
 			}
 		}
 	}
 
 	@media (--screen-md) {
 		&.gutter-md-default {
-			margin-right: var(--margin-row-default);
-			margin-left: var(--margin-row-default);
+			@mixin gutter-default;
 
 			& > * {
-				padding-right: var(--gutter-col-default);
-				padding-left: var(--gutter-col-default);
+				@mixin gutter-col-default;
 			}
 		}
 
 		&.gutter-md-medium {
-			margin-right: var(--margin-row-medium);
-			margin-left: var(--margin-row-medium);
+			@mixin gutter-medium;
 
 			& > * {
-				padding-right: var(--gutter-col-medium);
-				padding-left: var(--gutter-col-medium);
+				@mixin gutter-col-medium;
 			}
 		}
 
 		&.gutter-md-big {
-			margin-right: var(--margin-row-big);
-			margin-left: var(--margin-row-big);
+			@mixin gutter-big;
 
 			& > * {
-				padding-right: var(--gutter-col-big);
-				padding-left: var(--gutter-col-big);
+				@mixin gutter-col-big;
 			}
 		}
 	}
 
 	@media (--screen-lg) {
 		&.gutter-lg-default {
-			margin-right: var(--margin-row-default);
-			margin-left: var(--margin-row-default);
+			@mixin gutter-default;
 
 			& > * {
-				padding-right: var(--gutter-col-default);
-				padding-left: var(--gutter-col-default);
+				@mixin gutter-col-default;
 			}
 		}
 
 		&.gutter-lg-medium {
-			margin-right: var(--margin-row-medium);
-			margin-left: var(--margin-row-medium);
+			@mixin gutter-medium;
 
 			& > * {
-				padding-right: var(--gutter-col-medium);
-				padding-left: var(--gutter-col-medium);
+				@mixin gutter-col-medium;
 			}
 		}
 
 		&.gutter-lg-big {
-			margin-right: var(--margin-row-big);
-			margin-left: var(--margin-row-big);
+			@mixin gutter-big;
 
 			& > * {
-				padding-right: var(--gutter-col-big);
-				padding-left: var(--gutter-col-big);
+				@mixin gutter-col-big;
 			}
 		}
 	}
 
 	@media (--screen-xl) {
 		&.gutter-xl-default {
-			margin-right: var(--margin-row-default);
-			margin-left: var(--margin-row-default);
+			@mixin gutter-default;
 
 			& > * {
-				padding-right: var(--gutter-col-default);
-				padding-left: var(--gutter-col-default);
+				@mixin gutter-col-default;
 			}
 		}
 
 		&.gutter-xl-medium {
-			margin-right: var(--margin-row-medium);
-			margin-left: var(--margin-row-medium);
+			@mixin gutter-medium;
 
 			& > * {
-				padding-right: var(--gutter-col-medium);
-				padding-left: var(--gutter-col-medium);
+				@mixin gutter-col-medium;
 			}
 		}
 
 		&.gutter-xl-big {
-			margin-right: var(--margin-row-big);
-			margin-left: var(--margin-row-big);
+			@mixin gutter-big;
 
 			& > * {
-				padding-right: var(--gutter-col-big);
-				padding-left: var(--gutter-col-big);
+				@mixin gutter-col-big;
 			}
 		}
 	}
 
 	@media (--screen-xxl) {
 		&.gutter-xxl-default {
-			margin-right: var(--margin-row-default);
-			margin-left: var(--margin-row-default);
+			@mixin gutter-default;
 
 			& > * {
-				padding-right: var(--gutter-col-default);
-				padding-left: var(--gutter-col-default);
+				@mixin gutter-col-default;
 			}
 		}
 
 		&.gutter-xxl-medium {
-			margin-right: var(--margin-row-medium);
-			margin-left: var(--margin-row-medium);
+			@mixin gutter-medium;
 
 			& > * {
-				padding-right: var(--gutter-col-medium);
-				padding-left: var(--gutter-col-medium);
+				@mixin gutter-col-medium;
 			}
 		}
 
 		&.gutter-xxl-big {
-			margin-right: var(--margin-row-big);
-			margin-left: var(--margin-row-big);
+			@mixin gutter-big;
 
 			& > * {
-				padding-right: var(--gutter-col-big);
-				padding-left: var(--gutter-col-big);
+				@mixin gutter-col-big;
 			}
 		}
 	}
 
 	@media (--screen-xxxl) {
 		&.gutter-xxxl-default {
-			margin-right: var(--margin-row-default);
-			margin-left: var(--margin-row-default);
+			@mixin gutter-default;
 
 			& > * {
-				padding-right: var(--gutter-col-default);
-				padding-left: var(--gutter-col-default);
+				@mixin gutter-col-default;
 			}
 		}
 
 		&.gutter-xxxl-medium {
-			margin-right: var(--margin-row-medium);
-			margin-left: var(--margin-row-medium);
+			@mixin gutter-medium;
 
 			& > * {
-				padding-right: var(--gutter-col-medium);
-				padding-left: var(--gutter-col-medium);
+				@mixin gutter-col-medium;
 			}
 		}
 
 		&.gutter-xxxl-big {
-			margin-right: var(--margin-row-big);
-			margin-left: var(--margin-row-big);
+			@mixin gutter-big;
 
 			& > * {
-				padding-right: var(--gutter-col-big);
-				padding-left: var(--gutter-col-big);
+				@mixin gutter-col-big;
 			}
 		}
 	}
