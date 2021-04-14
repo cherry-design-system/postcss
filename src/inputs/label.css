@@ -1,0 +1,24 @@
+label {
+	color: var(--color-gray);
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 10px 0 0;
+	margin: auto 0;
+	line-height: var(--lineheight-text-mobile);
+
+	@media (--screen-lg) {
+		line-height: var(--lineheight-text-desktop);
+	}
+
+	&.error {
+		color: var(--color-error);
+	}
+
+	&.success {
+		color: var(--color-success);
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+}

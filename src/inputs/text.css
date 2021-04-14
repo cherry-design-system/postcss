@@ -1,0 +1,165 @@
+@define-mixin primary-select {
+	background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yIDJMOCA4TDE0IDIiIHN0cm9rZT0iI0Y0M0Y1RSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+	background-repeat: no-repeat;
+	background-color: var(--color-light);
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+}
+
+@define-mixin secondary-select {
+	background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yIDJMOCA4TDE0IDIiIHN0cm9rZT0iIzBFQTVFOSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+	background-repeat: no-repeat;
+	background-color: var(--color-light);
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+}
+
+@define-mixin tertiary-select {
+	background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yIDJMOCA4TDE0IDIiIHN0cm9rZT0iI0E4NTVGNyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+	background-repeat: no-repeat;
+	background-color: var(--color-light);
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+}
+
+@define-mixin gray-select {
+	background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yIDJMOCA4TDE0IDIiIHN0cm9rZT0iIzlDQTNBRiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+	background-repeat: no-repeat;
+	background-color: var(--color-light);
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+}
+
+input,
+textarea,
+select {
+	appearance: none;
+	transition: all 0.3s ease;
+	line-height: 1;
+	vertical-align: middle;
+	margin: 0;
+	font-family: var(--font-text);
+	border-radius: 6px;
+	border: solid 2px var(--color-gray-light);
+	padding: 15px 15px;
+	background: var(--color-light);
+	@mixin font-input-mobile;
+
+	@media (hover: hover) {
+		&:hover:not([disabled]) {
+			border-color: var(--color-secondary-light);
+
+			&.primary {
+				border-color: var(--color-primary-light);
+			}
+
+			&.tertiary {
+				border-color: var(--color-tertiary-light);
+			}
+		}
+	}
+
+	&:focus:not([disabled]) {
+		outline: none;
+		box-shadow: 0 0 0 4px var(--color-secondary-light);
+		border-color: var(--color-secondary);
+
+		&.primary {
+			box-shadow: 0 0 0 4px var(--color-primary-light);
+			border-color: var(--color-primary);
+		}
+
+		&.tertiary {
+			box-shadow: 0 0 0 4px var(--color-tertiary-light);
+			border-color: var(--color-tertiary);
+		}
+	}
+
+	&:active:not([disabled]) {
+		box-shadow: 0 0 0 2px var(--color-secondary-light);
+
+		&.primary {
+			box-shadow: 0 0 0 2px var(--color-primary-light);
+		}
+
+		&.tertiary {
+			box-shadow: 0 0 0 2px var(--color-tertiary-light);
+		}
+	}
+
+	&:disabled {
+		background: var(--color-gray-light);
+		border-color: var(--color-gray);
+		color: var(--color-gray);
+		cursor: not-allowed;
+		opacity: 0.9;
+	}
+
+	&.big {
+		@mixin font-input-big-mobile;
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+
+	@media (--screen-lg) {
+		@mixin font-input-desktop;
+
+		&.big {
+			@mixin font-input-big-desktop;
+		}
+	}
+}
+
+input[type="text"],
+input[type="number"],
+input[type="phone"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+	display: inline-block;
+	box-shadow: 0 0 0 0 var(--color-secondary-light);
+
+	&.primary {
+		box-shadow: 0 0 0 0 var(--color-primary-light);
+	}
+
+	&.tertiary {
+		box-shadow: 0 0 0 0 var(--color-tertiary-light);
+	}
+
+	&.error {
+		border-color: var(--color-error);
+	}
+
+	&.success {
+		border-color: var(--color-success);
+	}
+}
+
+select {
+	min-height: 51px;
+	padding-right: 40px;
+	@mixin secondary-select;
+
+	&.primary {
+		@mixin primary-select;
+	}
+
+	&.tertiary {
+		@mixin tertiary-select;
+	}
+
+	&:disabled {
+		@mixin gray-select;
+	}
+
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+
+	&.big {
+		min-height: 55px;
+	}
+}
