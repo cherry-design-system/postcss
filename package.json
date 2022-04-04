@@ -1,6 +1,6 @@
 {
 	"name": "cherry-postcss",
-	"version": "0.0.2-13",
+	"version": "0.0.2-14",
 	"description": "Cherry for PostCSS",
 	"author": "Luan Gjokaj <luan@riangle.com>",
 	"homepage": "https://cherry.design",
@@ -21,7 +21,7 @@
 	},
 	"dependencies": {
 		"autoprefixer": "^10.4.4",
-		"cssnano": "^5.1.5",
+		"cssnano": "^5.1.7",
 		"gulp": "^4.0.2",
 		"gulp-plumber": "^1.2.1",
 		"gulp-postcss": "^9.0.1",
